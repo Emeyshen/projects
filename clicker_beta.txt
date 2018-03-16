@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+void showinfo();
+
+class Player_with_Enemy {
+  
+  public:
+  
+  int hp = 10 + (stage * 1,1);
+  
+  void attack_enemy(int n) {
+    hp -= attack; 
+    if (hp <= 0) {
+      number_enemy += 1;
+      hp = 10 + (stage * 1,1);
+    }
+  }
+  
+  int getAttack() {
+    return attack;
+  }
+  
+  int getGold() {
+    return gold;
+  }
+  
+  int getStage() {
+    return stage;
+  }
+  
+  int getNumber_enemy(number_enemy) {
+    return number_enemy;
+  }
+  
+  int getHp() {
+    return hp;
+  }
+  
+  private:
+  int attack = 1, gold = 0, i = 1, number_enemy = 1;
+  float stage = 1;
+};
+
+int main() {
+  
+  int select, max_stage = 100;
+  
+  Player_with_Enemy player;
+  Player_with_Enemy enemy;
+  
+  player.getStage(i) = i;
+  
+  showinfo();
+  
+  for (int i = 1; i < max_stage; i++) {
+    cout << "Attack = " << player.getAttack() << "\t\t\t\t\t\t\t\t    Stage = " << player.getStage() << endl << "Gold = " << player.getGold() <<  "\t\t\t\t\t\t\t\t    Enemy = " << player.getNumber_enemy() << endl;
+    act_select:
+    cout << "\t\t\t         Enemy[hp = " << enemy.getHp() << "]" << endl;
+    cin >> select;
+    do {
+    switch(select) {
+      case 1: enemy.attack_enemy(enemy.getAttack()); goto act_select;
+    }
+} while (select != 3);
+  }
+  
+    return 0;
+}
+
+void showinfo(){
+ cout << "1 - attack, 2 - shop, 3 - exit." << endl; 
+}
